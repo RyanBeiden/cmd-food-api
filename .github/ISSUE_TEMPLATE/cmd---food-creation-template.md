@@ -2,7 +2,7 @@
 name: Cmd + Food Creation Template
 about: The template used for all Issues in this project.
 title: ''
-labels: enhancement
+labels: required
 assignees: RyanBeiden
 
 ---
