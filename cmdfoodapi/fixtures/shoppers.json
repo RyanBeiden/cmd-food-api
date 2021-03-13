@@ -1,0 +1,11 @@
+[
+    {
+        "model": "cmdfoodapi.shopper",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "profile_img": "https://i.ibb.co/qmVMVJ1/66321938-2718279878186085-8297092245606105088-n.jpg",
+            "pref_zip": 37069
+        }
+    }
+]

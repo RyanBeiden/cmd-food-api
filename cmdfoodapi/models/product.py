@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 class Product(models.Model):
-    product_id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100)
     price = models.IntegerField()
     image_url = models.ImageField(_("Product Image"), blank=True, upload_to='products/')

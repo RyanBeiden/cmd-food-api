@@ -1,0 +1,33 @@
+
+[
+    {
+        "model": "cmdfoodapi.productlist",
+        "pk": 1,
+        "fields": {
+            "product": 1,
+            "shopper": 1,
+            "location": 1,
+            "completed": false
+        }
+    },
+    {
+        "model": "cmdfoodapi.productlist",
+        "pk": 2,
+        "fields": {
+            "product": 2,
+            "shopper": 1,
+            "location": 1,
+            "completed": false
+        }
+    },
+    {
+        "model": "cmdfoodapi.productlist",
+        "pk": 3,
+        "fields": {
+            "product": 3,
+            "shopper": 1,
+            "location": 1,
+            "completed": false
+        }
+    }
+]
