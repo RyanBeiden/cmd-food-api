@@ -1,0 +1,1 @@
+from .shopper import Shopper
