@@ -133,3 +133,6 @@ media
 
 # VS Code files
 .vscode
+
+# SQL Session
+Cmd + Food.session.sql
