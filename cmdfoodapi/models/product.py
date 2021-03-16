@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
-    price = models.IntegerField()
+    price = models.CharField(max_length=10)
     image_url = models.ImageField(_("Product Image"), blank=True, upload_to='products/')
     aisle_number = models.IntegerField()
     aisle_side = models.CharField(max_length=2)

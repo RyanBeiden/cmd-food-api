@@ -7,4 +7,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class Shopper(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=CASCADE)
     profile_img = models.ImageField(_("Profile Image"), blank=True, upload_to='profiles/')
-    pref_zip = models.PositiveIntegerField(validators=[MinValueValidator(9999), MaxValueValidator(100000)])
+    current_store = models.ForeignKey("Location", 
+        on_delete=CASCADE,
+        related_name="shoppers",
+        related_query_name="shopper",
+        null=True)

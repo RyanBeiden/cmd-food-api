@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Frito-Lay Classic Mix Snacks & Potato Chips Variety Pack",
-            "price": 7.99,
+            "price": "7.99",
             "image_url": "https://www.kroger.com/product/images/small/front/0002840020546",
             "aisle_number": 4,
             "aisle_side": "R",
@@ -17,7 +17,7 @@
         "pk": 2,
         "fields": {
             "name": "Kroger® Penne Rigate Pasta",
-            "price": 1,
+            "price": "1",
             "image_url": "https://www.kroger.com/product/images/small/front/0001111085033",
             "aisle_number": 6,
             "aisle_side": "R",
@@ -30,7 +30,7 @@
         "pk": 3,
         "fields": {
             "name": "Kroger® 2% Reduced Fat Milk",
-            "price": 2.49,
+            "price": "2.49",
             "image_url": "https://www.kroger.com/product/images/small/front/0001111041700",
             "aisle_number": 100,
             "aisle_side": "L",
