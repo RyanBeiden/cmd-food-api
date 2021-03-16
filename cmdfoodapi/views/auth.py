@@ -5,7 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from django.views.decorators.csrf import csrf_exempt
-from cmdfoodapi.models import Shopper
+from cmdfoodapi.models import Shopper, Location
 
 @csrf_exempt
 def register_user(request):
@@ -26,7 +26,11 @@ def register_user(request):
     shopper = Shopper.objects.create(
         user = new_user,
         profile_img = req_body['profile_img'],
-        pref_zip = req_body['pref_zip']
+
+        # Set current_store after account creation, so a query can be made on Location Kroger API and added first.
+        # Once the Location object is added, you can do a PUT method to the Shopper object that updates the 
+        # current_store to match the new Location instance.
+        current_store = None
     )
 
     shopper.save()
