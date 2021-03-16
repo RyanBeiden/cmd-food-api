@@ -16,9 +16,4 @@ urlpatterns = [
     path('register', register_user),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
-]
-
-if settings.DEBUG is True:
-    urlpatterns += static('media/', base_dir / 'media/')
-elif settings.DEBUG is False:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

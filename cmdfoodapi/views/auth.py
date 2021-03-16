@@ -16,11 +16,11 @@ def register_user(request):
     req_body = json.loads(request.body.decode())
 
     new_user = User.objects.create_user(
-        username=req_body['username'],
-        email=req_body['email'],
-        password=req_body['password'],
-        first_name=req_body['first_name'],
-        last_name=req_body['last_name']
+        username = req_body['username'],
+        email = req_body['email'],
+        password = req_body['password'],
+        first_name = req_body['first_name'],
+        last_name = req_body['last_name']
     )
 
     shopper = Shopper.objects.create(
