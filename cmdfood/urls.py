@@ -5,11 +5,12 @@ from django.contrib import admin
 from rest_framework import routers
 from django.conf.urls import include
 from django.conf.urls.static import static
-from cmdfoodapi.views import register_user, login_user
+from cmdfoodapi.views import register_user, login_user, LocationViewSet
 
 base_dir = Path(__file__).resolve().parent.parent
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'locations', LocationViewSet, 'location')
 
 urlpatterns = [
     path('', include(router.urls)),
