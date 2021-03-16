@@ -5,7 +5,7 @@ from django.contrib import admin
 from rest_framework import routers
 from django.conf.urls import include
 from django.conf.urls.static import static
-from cmdfoodapi.views import register_user
+from cmdfoodapi.views import register_user, login_user
 
 base_dir = Path(__file__).resolve().parent.parent
 
@@ -14,6 +14,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 urlpatterns = [
     path('', include(router.urls)),
     path('register', register_user),
+    path('login', login_user),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
