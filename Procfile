@@ -1,0 +1,1 @@
+web: gunicorn cmdfood.wsgi --log-file -
