@@ -14,6 +14,7 @@ django-cors-headers = "*"
 pylint-django = "*"
 gunicorn = "*"
 django-on-heroku = "*"
+Pillow = "*"
 
 [requires]
 python_version = "3.9"
