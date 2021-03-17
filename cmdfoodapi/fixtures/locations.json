@@ -1,7 +1,7 @@
 [
     {
         "model": "cmdfoodapi.location",
-        "pk": 2,
+        "pk": 1,
         "fields": {
             "name": "Kroger - Independence Square",
             "city": "Franklin",
