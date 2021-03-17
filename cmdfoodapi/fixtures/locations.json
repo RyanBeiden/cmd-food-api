@@ -1,9 +1,9 @@
 [
     {
         "model": "cmdfoodapi.location",
-        "pk": 1,
+        "pk": 2,
         "fields": {
-            "name": "Independence Square",
+            "name": "Kroger - Independence Square",
             "city": "Franklin",
             "state": "TN",
             "zip_code": 37064,
