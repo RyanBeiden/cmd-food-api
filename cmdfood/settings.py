@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '9ty0j0#f^4(onebsx$l^)c^2dzrun@^2ayensy75ea5w1x0uw*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'cmdfoodapi',
+    'cloudinary',
 ]
 
 REST_FRAMEWORK = {
@@ -147,6 +148,11 @@ django_on_heroku.settings(locals())
 
 # Local Media URL (only when Debug is set to True)
 
-MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_ROOT = 'media/'
+MEDIA_URL = 'https://res.cloudinary.com/hhrrinvop/image/upload/v1616013808/cmd-food-assets/media/'
 
-MEDIA_URL = '/media/'
+# Cloudinary
+
+CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

@@ -15,6 +15,7 @@ pylint-django = "*"
 gunicorn = "*"
 django-on-heroku = "*"
 Pillow = "*"
+cloudinary = "*"
 
 [requires]
 python_version = "3.9"

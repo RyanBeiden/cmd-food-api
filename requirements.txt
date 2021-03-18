@@ -6,3 +6,4 @@ poster==0.8.1
 psycopg2==2.4.5
 wsgiref==0.1.2
 pillow==8.1.2
+cloudinary==0.2.1
