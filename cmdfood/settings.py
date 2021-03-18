@@ -150,3 +150,9 @@ django_on_heroku.settings(locals())
 
 MEDIA_ROOT = 'media/'
 MEDIA_URL = 'https://res.cloudinary.com/hhrrinvop/image/upload/v1616013808/cmd-food-assets/media/'
+
+# Cloudinary
+
+CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
