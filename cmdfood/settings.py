@@ -148,4 +148,4 @@ django_on_heroku.settings(locals())
 # Local Media URL (only when Debug is set to True)
 
 MEDIA_ROOT = 'media/'
-MEDIA_URL = 'https://res.cloudinary.com/hhrrinvop/image/upload/v1616013808/cmd-food-assets/media/'
+MEDIA_URL = 'https://res.cloudinary.com/hhrrinvop/image/upload/v1616017542/cmd-food-assets/media/'
