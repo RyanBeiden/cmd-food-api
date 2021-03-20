@@ -24,6 +24,11 @@ class ProductListViewSet(ViewSet):
     def list(self, request):
         productlists = ProductList.objects.all()
 
+        user_id = self.request.query_params.get('user_id', None)
+
+        if user_id is not None:
+            productlists = productlists.filter(shopper_id=user_id)
+
         serializer = ProductListSerializer(
             productlists, many=True, context={'request': request})
         return Response(serializer.data)
