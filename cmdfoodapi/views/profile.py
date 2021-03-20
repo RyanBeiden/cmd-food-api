@@ -2,16 +2,30 @@ import uuid
 import base64
 import cloudinary
 from rest_framework import status
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import serializers
+from rest_framework.viewsets import ViewSet
 from django.contrib.auth.models import User
 from rest_framework.response import Response
 from django.core.files.base import ContentFile
 from cmdfoodapi.models import Shopper, Location
 
-class ProfileViewSet(ModelViewSet):
+class ProfileViewSet(ViewSet):
     '''
-    Handles profile image upload and profile edits
+    Handles profile image upload, profile edits and listing a single profile
     '''
+
+    def list(self, request):
+        profiles = Shopper.objects.all()
+        user_id = request.auth.user
+
+        for profile in profiles:
+            if profile.user == user_id:
+                profiles = profiles.filter(id=user_id.id)
+
+        serializer = ProfileSerializer(
+            profiles, many=True, context={'request': request})
+        return Response(serializer.data)
+
 
     def update(self, request, pk=None):
         shopper = Shopper.objects.get(pk=pk)
@@ -39,3 +53,13 @@ class ProfileViewSet(ModelViewSet):
         shopper.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    '''
+    Serializer for all profile data
+    '''
+    
+    class Meta:
+        model = Shopper
+        fields = ('id', 'user', 'profile_img', 'current_store')
