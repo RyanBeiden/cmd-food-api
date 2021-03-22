@@ -35,9 +35,6 @@ class ProductViewSet(ViewSet):
         product.name = request.data['name']
         product.price = request.data['price']
         product.image_url = request.data['image_url']
-        product.aisle_number = request.data['aisle_number']
-        product.aisle_side = request.data['aisle_side']
-        product.aisle_bay = request.data['aisle_side']
 
         try:
             product.save()
@@ -68,4 +65,4 @@ class ProductSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Product
-        fields = ('id', 'kroger_id', 'url', 'name', 'price', 'image_url', 'aisle_number', 'aisle_side', 'aisle_bay')
+        fields = ('id', 'kroger_id', 'url', 'name', 'price', 'image_url', 'aisle')
