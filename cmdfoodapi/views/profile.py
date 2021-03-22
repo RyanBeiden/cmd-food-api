@@ -63,3 +63,4 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Shopper
         fields = ('id', 'user', 'profile_img', 'current_store')
+        depth = 1
