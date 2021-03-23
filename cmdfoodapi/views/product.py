@@ -35,6 +35,7 @@ class ProductViewSet(ViewSet):
         product.name = request.data['name']
         product.price = request.data['price']
         product.image_url = request.data['image_url']
+        product.aisle = request.data['image_url']
 
         try:
             product.save()
